@@ -1,6 +1,6 @@
 # Luiza Mantovani - Arquitetura
 
-![Logo da Luiza Mantovani Arquitetura](images/logo-carol.png)
+![Logo da Luiza Mantovani Arquitetura](images/logo-luiza.png)
 
 ## Sobre o Projeto
 
