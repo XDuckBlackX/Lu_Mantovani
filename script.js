@@ -38,3 +38,49 @@ document.querySelector('#contato-form').addEventListener('submit', function(e) {
     }
   });
   
+
+  let tooltip = null, mouseMoveHandler;
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    if (tooltip) return; 
+    tooltip = document.createElement('div');
+    tooltip.id = 'context-tooltip';
+    tooltip.innerText = "© Copyright Luiza Mantovani 2025. Direitos reservados.";
+    tooltip.style.position = 'absolute';
+    tooltip.style.background = 'rgba(92, 92, 92, 0.67)';
+    tooltip.style.color = '#fff';
+    tooltip.style.opacity = "0.8"; // define a opacidade
+    tooltip.style.padding = '5px 8px';
+    tooltip.style.borderRadius = '4px';
+    tooltip.style.fontSize = '10px';
+    tooltip.style.pointerEvents = 'none';
+    document.body.appendChild(tooltip);
+    mouseMoveHandler = function(e) {
+      tooltip.style.left = (e.pageX + 10) + 'px';
+      tooltip.style.top = (e.pageY + 10) + 'px';
+    };
+    document.addEventListener('mousemove', mouseMoveHandler);
+    mouseMoveHandler(e);
+    setTimeout(function() {
+      if (tooltip) {
+        document.body.removeChild(tooltip);
+        tooltip = null;
+        document.removeEventListener('mousemove', mouseMoveHandler);
+      }
+    }, 2000);
+  });
+
+    (function () {
+      const analyticsScript = document.createElement('script');
+      analyticsScript.src = '/_vercel/insights/script.js';
+      analyticsScript.defer = true;
+      document.body.appendChild(analyticsScript);
+    })();
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('.menu');
+      toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+      });
+    });
