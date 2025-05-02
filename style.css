@@ -1,58 +1,84 @@
 /* Reset básico */
-* { margin:0; padding:0; box-sizing:border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #4b2103;
-  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
   background-color: #fef6e4;
+  color: #4b2103;
+}
+
+/* Conter todo o conteúdo principal */
+.main {
+  flex: 1;
+  margin-top: 50px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .site-header {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .site-header .logo {
+  position: absolute;
+  left: 180px;
+  top: 5%;
+  opacity: 0.7;
   width: 100%;
-  max-width: 200px;
+  max-width: 150px;
   display: inline-block;
   margin: 0 auto 10px;
 }
+
 .site-header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
 }
 
-/* Barra de navegação */
-.menu {
-  text-align: center;
-  margin-bottom: 30px;
-}
 .menu ul {
   list-style: none;
   display: inline-flex;
   gap: 30px;
   padding: 0;
 }
+
 .menu ul li a {
   display: block;
   text-decoration: none;
-  color: #333;
+  color: #272727;
   font-size: 1.2rem;
   padding: 10px 15px;
   transition: transform 0.3s ease, color 0.3s ease;
   border-radius: 6px;
 }
+
 .menu ul li a:hover {
   transform: scale(1.05);
   color: #fd3693;
 }
 
+/* Seções */
 section {
   text-align: center;
   margin-bottom: 40px;
 }
+
 section h2 {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -60,8 +86,59 @@ section h2 {
   display: inline-block;
 }
 
-#sobre { text-align: center; }
+/* Container da seção sobre, projetos e contato */
+.container-sobre,
+.container-projetos,
+.container-contato {
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 1200px;
+}
 
+/* Seção "sobre": container com imagem e texto lado a lado */
+.container-sobre {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Imagem e texto na seção sobre */
+.sobre-img img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+.sobre-text {
+  flex: 1;
+  text-align: justify;
+}
+
+/* Centraliza o título da seção sobre */
+#sobre h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#sobre {
+  background-color: #f0f0f0;
+  /* ou sua cor desejada */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 60px 0;
+  /* espaçamento só no topo e embaixo */
+  margin: 0;
+  /* remove qualquer margem externa */
+  width: 100%;
+  /* usa toda a largura da viewport */
+  box-sizing: border-box;
+  /* garante que padding não ultrapasse os limites */
+}
+
+/* Grid do Portfólio */
 #portfolio .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -73,15 +150,16 @@ section h2 {
 }
 
 /* Carousel styles */
-/* Define o contêiner e posiciona as imagens sobrepostas */
 .carousel {
   position: relative;
   width: 100%;
   max-width: 270px;
-  height: 200px; /* Ajuste conforme o tamanho desejado */
+  height: 200px;
+  /* Ajuste conforme necessário */
   margin: 0 auto;
   overflow: hidden;
 }
+
 .carousel-img {
   position: absolute;
   top: 0;
@@ -91,14 +169,18 @@ section h2 {
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
+
 .carousel-img:hover {
   transform: translateX(-50%) scale(1.05);
 }
 
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
 
 /* Botões do carrossel */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -111,43 +193,215 @@ section h2 {
   z-index: 10;
   border-radius: 50%;
 }
-.prev { left: 10px; }
-.next { right: 10px; }
 
-/* Exibe os botões ao passar o mouse no carrossel */
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 .carousel:hover .prev,
 .carousel:hover .next {
   display: block;
 }
 
 /* Formulário */
-form label {
-  display: block;
-  margin-bottom: 10px;
+#contato {
+  text-align: center;
+  /* para centralizar o título */
+  margin: 40px auto;
+  max-width: 600px;
+  /* limite de largura do formulário */
 }
-form input,
-form textarea {
+
+#contato h2 {
+  font-family: "Work Sans", sans-serif;
+  color: #4b2103;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+
+/* Container do rótulo flutuante */
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Estiliza o input/textarea */
+.floating-label input,
+.floating-label textarea {
   width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  background: none;
+  font-size: 1rem;
 }
-form button {
-  background: #005f73;
+
+/* Rótulo posicionado inicialmente sobre o input */
+.floating-label label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+/* Quando o input está em foco ou tem conteúdo, o rótulo some */
+.floating-label input:focus~label,
+.floating-label input:not(:placeholder-shown)~label,
+.floating-label input:valid~label,
+.floating-label textarea:focus~label,
+.floating-label textarea:not(:placeholder-shown)~label,
+.floating-label textarea:valid~label {
+  opacity: 0;
+}
+
+/* Grupo para inputs lado a lado */
+.floating-label-group {
+  display: flex;
+  gap: 20px;
+}
+
+.floating-label-group .floating-label {
+  flex: 1;
+}
+
+/* Estilização adicional para checkbox e botão */
+.form-privacy {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.form-privacy a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.form-submit {
+  text-align: center;
+}
+
+.form-submit button {
+  background: #fd3693;
   color: #fff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 4px;
 }
-form button:hover {
+
+.form-submit button:hover {
   background: #0a9396;
 }
 
-/* Alinha os textos dos labels à esquerda */
-#contato form label {
+/* Rodapé */
+footer.rodape {
+  width: 100%;
+  background: #4b2103;
+  color: #fff;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.footer-logo {
   text-align: left;
-  display: block;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+}
+
+.footer-logo img {
+  /*opacity: 0.7;*/
+  max-width: 100px;
+}
+
+.rodape-container {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rodape-info,
+.rodape-redes {
+  flex: 1 1 50%;
+}
+
+.rodape-redes {
+  text-align: right;
+}
+
+.rodape-redes a {
+  margin-left: 10px;
+}
+
+.rodape-redes img {
+  height: 32px;
+  width: 32px;
+}
+
+.rodape-copy {
+  text-align: center;
+  font-size: 0.9em;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .site-header .logo {
+    position: static;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .site-header h1 {
+    font-size: 2rem;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .floating-label-group {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .rodape-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rodape-redes {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+
+.menu {
+  display: fixed;
+  flex-direction: column;
+}
+
+.menu.active {
+  display: flex;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
 }
