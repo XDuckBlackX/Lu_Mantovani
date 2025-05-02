@@ -405,3 +405,99 @@ footer.rodape {
   cursor: pointer;
   margin: 10px;
 }
+
+/* ■ CHATBOT ■ */
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+  z-index: 1000;
+  transition: height 0.3s ease;
+}
+
+/* cabeçalho clicável */
+#chatbot-header {
+  text-align: center;
+  background: #272727;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;           /* indica que é clicável */
+}
+
+/* corpo e input */
+#chatbot-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+#chatbot-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+#chatbot-input input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+#chatbot-input button {
+  border: none;
+  background: #272727;
+  color: #fff;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+/* mensagens */
+.bot-message, .user-message {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+  line-height: 1.3;
+}
+.bot-message { background: #f1f1f1; text-align: left; }
+.user-message { background: #dcf8c6; text-align: right; }
+
+/* Perguntas rápidas */
+#quick-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+}
+#quick-questions .quick-btn {
+  flex: 1 1 calc(50% - 6px);
+  padding: 6px 8px;
+  font-size: 0.8rem;
+  background: #0a9396;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s;
+}
+#quick-questions .quick-btn:hover {
+  background: #0a7f7f;
+}
+
+
+#chatbot.minimized {
+  height: auto;              /* só exibe cabeçalho */
+}
+#chatbot.minimized #quick-questions,
+#chatbot.minimized #chatbot-body,
+#chatbot.minimized #chatbot-input {
+  display: none;
+}
