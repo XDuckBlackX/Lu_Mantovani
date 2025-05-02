@@ -1,83 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Luiza Mantovani | Arquitetura</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="site-header">
-    <img src="images/logo-luiza.png" alt="Luiza Mantovani Arquitetura" class="logo">
-    <h1>Luiza Mantovani</h1>
-  </header>
+  <div class="main">
+    <header class="site-header">
+      <img src="images/logo-luiza_semfundo.png" alt="Luiza Mantovani Arquitetura" class="logo">
+      <h1>Luiza Mantovani</h1>
+      <h3>architecture</h3>
 
-  <!-- Barra de navegação -->
-  <nav class="menu">
-    <ul>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#portfolio">Portfólio</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
+    <!-- Barra de navegação -->
+    <nav class="menu">
+      <ul>
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#portfolio">projetos</a></li>
+        <li><a href="#contato">fale conosco</a></li>
+      </ul>
+    </nav>
+    
 
-  <section id="sobre">
-    <h2>Sobre</h2>
-    <p>Luiza Mantovani é estudante de Arquitetura e Urbanismo na UPF, atualmente cursando o 5º semestre. Durante sua trajetória acadêmica, Luiza demonstrou grande comprometimento com a prática profissional, tendo acumulado uma experiência significativa durante um estágio de 1 ano e 8 meses no programa Naduque, promovido pela própria UPF. Essa oportunidade permitiu que ela colocasse em prática os conhecimentos teóricos e desenvolvesse habilidades essenciais para a área. Atualmente, Luiza está aprimorando ainda mais sua formação por meio de um estágio em um conceituado escritório de arquitetura, onde, nos últimos 6 meses, tem contribuído com projetos inovadores e desenvolvido uma visão criativa e funcional para resolver desafios de design e urbanismo. Com uma sólida base acadêmica e experiências práticas diversificadas, ela se destaca pela paixão pela arquitetura e pela busca contínua de soluções sustentáveis e bem planejadas para transformar espaços e vidas.</p>
-  </section>
-
-  <section id="portfolio">
-    <h2>Portfólio</h2>
-    <div class="grid">
-      <!-- Projeto 1 -->
-      <div class="item">
-        <div class="carousel" data-index="0">
-          <img src="images/imagem2.webp" alt="Projeto 1 Imagem 1" class="carousel-img">
-          <img src="images/imagem3.jpg" alt="Projeto 1 Imagem 2" class="carousel-img hidden">
-          <img src="images/imagem4.jpg" alt="Projeto 1 Imagem 3" class="carousel-img hidden">
-          <button class="prev" aria-label="Imagem anterior">&#60;</button>
-          <button class="next" aria-label="Próxima imagem">&#62;</button>
+    <section id="sobre">
+      <h2>sobre</h2>
+      <div class="container-sobre">
+        <div class="sobre-img">
+          <img src="images/foto_luiza.jpg" alt="Luiza Mantovani Arquitetura">
         </div>
-        <h3>Projeto Residencial</h3>
+        <div class="sobre-text">
+          <p> Luiza Mantovani é estudante de Arquitetura e Urbanismo na UPF, atualmente cursando o 5º semestre. Durante
+            sua trajetória acadêmica, Luiza demonstrou grande comprometimento com a prática profissional, tendo
+            acumulado uma experiência significativa durante um estágio de 1 ano e 8 meses no programa Naduque, promovido
+            pela própria UPF. Essa oportunidade permitiu que ela colocasse em prática os conhecimentos teóricos e
+            desenvolvesse habilidades essenciais para a área. Atualmente, Luiza está aprimorando ainda mais sua formação
+            por meio de um estágio em um conceituado escritório de arquitetura, onde, nos últimos 6 meses, tem
+            contribuído com projetos inovadores e desenvolvido uma visão criativa e funcional para resolver desafios de
+            design e urbanismo. Com uma sólida base acadêmica e experiências práticas diversificadas, ela se destaca
+            pela paixão pela arquitetura e pela busca contínua de soluções sustentáveis e bem planejadas para
+            transformar espaços e vidas.</p>
+        </div>
       </div>
-  
-      <!-- Projeto 2 -->
-      <div class="item">
-        <div class="carousel" data-index="0">
-          <img src="images/imagem4.jpg" alt="Projeto 2 Imagem 1" class="carousel-img">
-          <img src="images/imagem3.jpg" alt="Projeto 2 Imagem 2" class="carousel-img hidden">
-          <img src="images/imagem2.webp" alt="Projeto 2 Imagem 3" class="carousel-img hidden">
-          <button class="prev" aria-label="Imagem anterior">&#60;</button>
-          <button class="next" aria-label="Próxima imagem">&#62;</button>
+    </section>
+
+    <section id="portfolio">
+      <h2>projetos</h2>
+      <div class="container-projetos">
+        <div class="grid">
+          <!-- os itens do portfólio permanecem inalterados -->
+          <!-- Projeto 1 -->
+          <div class="item">
+            <div class="carousel" data-index="0">
+              <img src="images/UMUO5704.JPG" alt="Projeto 1 Imagem 1" class="carousel-img">
+              <!--<img src="images/imagem3.jpg" alt="Projeto 1 Imagem 2" class="carousel-img hidden">-->
+              <!--<img src="images/imagem4.jpg" alt="Projeto 1 Imagem 3" class="carousel-img hidden">-->
+              <button class="prev" aria-label="Imagem anterior">&#60;</button>
+              <button class="next" aria-label="Próxima imagem">&#62;</button>
+            </div>
+            <h3>Projeto residencial</h3>
+          </div>
+
+          <!-- Projeto 2 -->
+          <div class="item">
+            <div class="carousel" data-index="0">
+              <img src="images/quarto2_1.jpg" alt="Projeto 2 Imagem 1" class="carousel-img">
+              <img src="images/quarto2_2.jpg" alt="Projeto 2 Imagem 2" class="carousel-img hidden">
+              <img src="images/quarto2.jpg" alt="Projeto 2 Imagem 3" class="carousel-img hidden">
+              <button class="prev" aria-label="Imagem anterior">&#60;</button>
+              <button class="next" aria-label="Próxima imagem">&#62;</button>
+            </div>
+            <h3>Quarto</h3>
+          </div>
+
+          <!-- Projeto 3 -->
+          <div class="item">
+            <div class="carousel" data-index="0">
+              <img src="images/quarto1.jpg" alt="Projeto 3 Imagem 1" class="carousel-img">
+              <img src="images/quarto1_1.jpg" alt="Projeto 3 Imagem 2" class="carousel-img hidden">
+              <img src="images/quarto1_2.jpg" alt="Projeto 3 Imagem 3" class="carousel-img hidden">
+              <img src="images/quarto1_3.jpg" alt="Projeto 3 Imagem 4" class="carousel-img hidden">
+              <img src="images/quarto1_4.jpg" alt="Projeto 3 Imagem 5" class="carousel-img hidden"> 
+              <button class="prev" aria-label="Imagem anterior">&#60;</button>
+              <button class="next" aria-label="Próxima imagem">&#62;</button>
+            </div>
+            <h3>Quarto</h3>
+          </div>
         </div>
-        <h3>Loft Moderno</h3>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>fale conosco</h2>
+      <div class="container-contato">
+        <form action="https://formspree.io/f/mnnpwvae" method="POST" id="contato-form">
+          <div class="floating-label">
+            <input type="text" id="nome" name="nome" placeholder=" " required>
+            <label for="nome">nome</label>
+          </div>
+          <div class="floating-label-group">
+            <div class="floating-label">
+              <input type="email" id="email" name="email" placeholder=" " required>
+              <label for="email">email</label>
+            </div>
+            <div class="floating-label">
+              <input type="tel" id="telefone" name="telefone" placeholder=" " required>
+              <label for="telefone">telefone</label>
+            </div>
+          </div>
+          <div class="floating-label">
+            <textarea id="mensagem" name="mensagem" rows="3" placeholder=" " required></textarea>
+            <label for="mensagem">mensagem</label>
+          </div>
+          <div class="form-privacy">
+            <input type="checkbox" id="privacy-check" name="privacy-check" required>
+            <label for="privacy-check">
+              Concordo com a <a href="#" target="_blank">política de privacidade</a>.
+            </label>
+          </div>
+          <div class="form-submit">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer class="rodape">
+    <div class="rodape-container">
+      <div class="footer-logo">
+        <img src="images/logo-luiza_semfundo.png" alt="Logo Luiza Mantovani">
+      </div>
+      <div class="rodape-info">
+        <p>Cidade de Passo Fundo - Rio Grande do Sul</p>
+        <p>Telefone: (54) 9 9999-9999</p>
+        <p>Email: mantovanilu@hotmail.com</p>
+      </div>
+      <div class="rodape-redes">
+        <a href="https://wa.me/5545999999999" target="_blank"><img src="images/whats.png" alt="WhatsApp"></a>
+        <a href="https://facebook.com/luiza.mantovani.52" target="_blank"><img src="images/face.png" alt="Facebook"></a>
+        <a href="https://instagram.com/mantovani_luiza/" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
       </div>
     </div>
-  </section>
-
-  <section id="contato">
-    <h2>Contato</h2>
-    <form action="https://formspree.io/f/SEU_ENDPOINT_AQUI" method="POST" id="contato-form">
-      <label>
-        Nome Completo:<br>
-        <input type="text" name="nome" required>
-      </label><br>
-      <label>
-        E‑mail:<br>
-        <input type="email" name="email" required>
-      </label><br>
-      <label>
-        Telefone:<br>
-        <input type="tel" name="telefone" required>
-      </label><br>
-      <label>
-        Mensagem:<br>
-        <textarea name="mensagem" rows="5" required></textarea>
-      </label><br>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-  
+    <p class="rodape-copy">&copy; Copyright Luiza Mantovani 2025. Direitos reservados.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
